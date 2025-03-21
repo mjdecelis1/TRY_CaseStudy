@@ -1,22 +1,22 @@
 /*Declaration of Fonts*/
 @font-face {
   font-family: 'Camar';
-  src: url('../fonts/Camar 400.otf');
+  src: url('Camar 400.otf');
 }
 
 @font-face {
     font-family: Roboto-Bold;
-    src: url(../fonts/roboto_bold.ttf);
+    src: url(roboto_bold.ttf);
 }
 
 @font-face {
     font-family: Roboto-Light;
-    src: url(../fonts/roboto_light.ttf);
+    src: url(roboto_light.ttf);
 }
 
 @font-face {
     font-family: Roboto-Regular;
-    src: url(../fonts/roboto_regular.ttf);
+    src: url(roboto_regular.ttf);
 }
 
 /* changes in navigation bar */
