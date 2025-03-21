@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'Camar';
-  src: url('../fonts/Camar 400.otf');
+  src: url('Camar 400.otf');
 }
 
 * {
@@ -146,7 +146,7 @@ html {
 
 /* ABOUT US */
 #aboutUs{
-  background-image: url('../img/AboutUsMain-BG.png');
+  background-image: url('AboutUsMain-BG.png');
   background-repeat: no-repeat;
   background-size: cover;
   height: 50vh;
@@ -204,7 +204,7 @@ html {
   font-family: 'Montserrat', sans-serif;
   background: 
     linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.5)), 
-    url('../img/section-contents/background.jpg') no-repeat center center fixed;
+    url('background.jpg') no-repeat center center fixed;
   background-size: cover;
   overflow: hidden;
 }
