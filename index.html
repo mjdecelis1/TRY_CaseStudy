@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="navbar/navbar.css">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" 
+  />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="CSS/style.css">
+  <title>Artvelfun-Main page</title>
+  </head>
+  
+  <body>
+    <!-- Navigation Bar -->
+    <header style="z-index: 1000;">
+      <div id="navbar-placeholder"></div>
+    </header>
+    <!-- Hero Section -->
+    <section id="hero">
+      <img class="img-slide active" src="../img/Luzon.jpg" alt="Luzon-background">
+      <img class="img-slide" src="../img/Visayas.jpg" alt="Visayas-background">
+      <img class="img-slide" src="../img/Mindanao.jpg" alt="Midnanao-background">
+
+      <div class="hero-content-container active">
+        <h1>Luzon</h1>
+        <p>Luzon is the largest and most populous island in the Philippines, located in the northern part of the country. It is the political, economic, and cultural center of the Philippines, home to the capital city, Manila, and key financial districts like Metro Manila. Luzon is known for its diverse landscapes, including mountains, beaches, volcanoes, and rice terraces, as well as its rich history, with Spanish colonial architecture and significant World War II sites.</p>
+        <a class="button active" href="destinations.html?region=luzon" target="_blank">Tour</a>
+      </div>      
+      <div class="hero-content-container">
+        <h1>Visayas</h1>
+        <p>Visayas is a group of islands in the central Philippines, known for its vibrant culture, beautiful beaches, and historical landmarks. It is home to popular tourist destinations like Cebu, Bohol, and Boracay, and plays a key role in the country's culture and economy. The region is also noted for its festivals, such as the Sinulog and Ati-Atihan.</p>
+        <a class="button" href="destinations.html?region=visayas" target="_blank">Tour</a>
+      </div>
+      <div class="hero-content-container">
+        <h1>Mindanao</h1>
+        <p>Mindanao is the second-largest island in the Philippines, located in the southern part of the country. Known for its rich cultural diversity, Mindanao is home to various indigenous groups and vibrant traditions. The island boasts a stunning mix of landscapes, including pristine beaches, lush rainforests, and majestic mountain ranges like Mount Apo, the highest peak in the Philippines. Its historical and cultural heritage includes ancient Muslim sultanates, Spanish colonial influences, and significant World War II landmarks.</p>
+        <a class="button" href="destinations.html?region=mindanao"target="_blank">Tour</a>
+      </div>
+
+      <div class="slider-navigation">
+        <div class="nav-btn active"></div>
+        <div class="nav-btn"></div>
+        <div class="nav-btn"></div>
+      </div>
+    </section>
+
+    <!--About Us Section-->
+  <section id="aboutUs">
+    <div class="aboutUs-wrapper">
+      <img src="img/aboutUsSection-Logo.png" alt="Logo">
+      <h1>The Journey Behind Artvelfun</h1>
+        <p><b>Artvelfun</b> was born from a shared passion for showcasing the beauty and diversity of the Philippines. Created by five determined college students—united not only by their love for travel but also by the goal of successfully finishing this semester.</p>
+        <a class="about-button" href="../HTML/aboutUs.html" target="_blank">ABOUT US</a>
+    </div>
+  </section>
+
+    <!--Article Section-->
+  <section id="article" class="article-section">
+    <header style="height: 3.375rem;"></header>
+      <div class="title-article">ARTICLE</div>
+
+    <div class="scrollable-content">
+      <div class="container">
+        <div class="card" onclick="navigateToContent('intramuros')">
+          <img src="../img/section-contents/intramuros.jpg" alt="Intramuros">
+          <div class="card-content">
+            <h1>WHAT TO DO IN INTRAMUROS?</h1>
+            <p>MANILA, PHILIPPINES</p>
+          </div>
+        </div>
+
+        <div class="card" onclick="navigateToContent('kawasan')">
+          <img src="../img/section-contents/kawasan.jpg" alt="Kawasan">
+          <div class="card-content">
+            <h1>WHAT TO DO IN KAWASAN?</h1>
+            <p>CEBU, PHILIPPINES</p>
+          </div>
+        </div>
+
+        <div class="card" onclick="navigateToContent('rizalpark')">
+          <img src="../img/section-contents/rizalpark.jpg" alt="Rizal Park">
+          <div class="card-content">
+            <h1>WHAT TO DO IN RIZAL PARK?</h1>
+            <p>MANILA, PHILIPPINES</p>
+          </div>
+        </div>
+
+        <div class="card" onclick="navigateToContent('banaue')">
+          <img src="../img/section-contents/banaue.jpg" alt="Banaue">
+          <div class="card-content">
+            <h1>WHAT TO DO IN BANAUE?</h1>
+            <p>BANAUE, PHILIPPINES</p>
+          </div>
+        </div>
+
+        <div class="card" onclick="navigateToContent('chocolatehills')">
+          <img src="../img/section-contents/chocolatehills.jpg" alt="Chocolate Hills">
+          <div class="card-content">
+            <h1>WHAT TO DO IN CHOCOLATE HILLS?</h1>
+            <p>BOHOL, PHILIPPINES</p>
+          </div>
+        </div>
+
+        <div class="card" onclick="navigateToContent('boracay')">
+          <img src="../img/section-contents/boracay.jpg" alt="Boracay">
+            <div class="card-content">
+              <h1>WHAT TO DO IN BORACAY?</h1>
+              <p>BORACAY, PHILIPPINES</p>
+            </div>
+        </div>
+
+        <div class="card" onclick="navigateToContent('surigao')">
+          <img src="../img/section-contents/surigao.jpg" alt="Surigao">
+          <div class="card-content">
+            <h1>WHAT TO DO IN SURIGAO?</h1>
+            <p>SURIGAO, PHILIPPINES</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!--Culture Section-->
+  <section id="culture">
+    <header style="height: 55px;"></header>
+    
+    <div class="culture-container">
+      <h1 class="culture-title">Culture</h1>
+  <section class="food-section">
+      <h2>Craving for Something?</h2>
+      <div class="line"></div>
+
+      <div class="culture-scroll-container">
+          <div class="grid">
+              <div class="culture-card" onclick="showPopup(this)">
+                  <img src="../img/section-contents/adobo.jpg" alt="Adobo">
+                  <h4>Adobo</h4>
+                  <p>Adobo is a classic Filipino dish made by simmering meat—commonly chicken or pork—in a flavorful mixture of vinegar, soy sauce, garlic, bay leaves, and peppercorns. Known for its tangy, savory taste, it’s often served with rice and has many regional variations, making it a beloved staple in Filipino cuisine.</p>
+              </div>
+              <div class="culture-card" onclick="showPopup(this)">
+                  <img src="../img/section-contents/pancit.jpg" alt="Pancit">
+                  <h4>Pancit</h4>
+                  <p>Pancit is a popular Filipino noodle dish, often served during celebrations. It consists of stir-fried noodles with vegetables, meats (like chicken, pork, or shrimp), and sometimes hard-boiled eggs. The most common variety, Pancit Canton, features thin egg noodles stir-fried with soy sauce and garnished with calamansi or lemon. Pancit symbolizes good luck and longevity, making it a staple at birthdays and other festive occasions.</p>
+              </div>
+              <div class="culture-card" onclick="showPopup(this)">
+                  <img src="../img/section-contents/lechon.jpg" alt="Lechon Baboy">
+                  <h4>Lecon Baboy</h4>
+                  <p>Lechon Baboy is a Filipino dish featuring a whole pig, slow-roasted over an open flame until the skin is crispy and golden. The meat is tender and flavorful, often seasoned with a blend of spices and herbs. It's a popular dish for celebrations, such as fiestas and special occasions, and is typically served with a dipping sauce like liver or vinegar.</p>
+              </div>
+              <div class="culture-card" onclick="showPopup(this)">
+                  <img src="../img/section-contents/sinigang.jpg" alt="Sinigang">
+                  <h4>Sinigang</h4>
+                  <p>Sinigang is a flavorful Filipino sour soup made with a variety of meats (such as pork, shrimp, or fish) and a mix of vegetables like tomatoes, eggplant, and kangkong (water spinach). The signature tangy flavor comes from tamarind, although other souring agents like calamansi or green mango can also be used. It’s a comforting, hearty dish, often enjoyed with steamed rice.</p>
+              </div>
+              <div class="culture-card" onclick="showPopup(this)">
+                  <img src="../img/section-contents/halohalo.jpg" alt="Halo-halo">
+                  <h4>Halo-halo</h4>
+                  <p>Halo-Halo is a popular Filipino dessert made with a mix of shaved ice, sweetened fruits (like jackfruit, bananas, and coconut), jellies, beans, and colorful toppings. It’s traditionally served in a tall glass, topped with leche flan, purple yam (ube), and a scoop of ice cream. The ingredients are mixed together before eating, offering a refreshing and sweet treat, perfect for hot weather.</p>
+              </div>
+              <div class="culture-card" onclick="showPopup(this)">
+                  <img src="../img/section-contents/porksisig.jpg" alt="Pork Sisig">
+                  <h4>Pork Sisig</h4>
+                  <p>Pork Sisig is a flavorful Filipino dish made from finely chopped, seasoned pork (typically from the face, ears, and sometimes liver), which is then fried until crispy. It’s usually served sizzling on a hot plate, with a tangy mix of onions, chili peppers, and a squeeze of calamansi (Filipino lime). Often enjoyed with rice, Pork Sisig is a savory, slightly spicy dish, perfect as a main or appetizer.</p>
+              </div>
+              <div class="culture-card" onclick="showPopup(this)">
+                  <img src="../img/section-contents/balut.jpg" alt="Balut">
+                  <h4>Balut</h4>
+                  <p>Balut is a Filipino street food made from a fertilized duck egg, typically boiled and eaten warm. The egg contains a partially developed embryo, which is considered a delicacy. It is often served with salt, pepper, and sometimes a splash of vinegar or chili, offering a unique, savory flavor and texture. Balut is popular as a snack or late-night food.</p>
+              </div>
+          </div>
+      </div>
+  </section>
+
+  <section class="fest-section">
+      <h2>Enjoy these Festivals!</h2>
+      <div class="line"></div>
+
+      <div class="culture-scroll-container">
+          <div class="grid">
+              <div class="culture-card" onclick="showPopup(this)">
+                  <img src="../img/section-contents/panagbenga.jpg" alt="Panagbenga Festival">
+                  <h4>Panagbenga Festival</h4>
+                  <div>Baguio City</div>
+                  <p>The Panagbenga Festival is an annual flower festival held in Baguio City, Philippines, every February. Known as the "Flower Festival," it showcases vibrant floral floats, street dancing, and cultural performances. The festival celebrates Baguio's cool climate and rich floral heritage, attracting thousands of visitors. Events include the grand float parade, street dancing competitions, and various cultural shows, making it a lively and colorful celebration of the city’s beauty and traditions.</p>
+              </div>
+              <div class="culture-card" onclick="showPopup(this)">
+                  <img src="../img/section-contents/ati-atihan.jpg" alt="Ati-atihan Festival">
+                  <h4>Ati-atihan Festival</h4>
+                  <div>Kalibo, Aklan</div>
+                  <p>The Ati-Atihan Festival is held annually in Kalibo, Aklan, during January, in honor of the Santo Niño (Child Jesus). Often called the "Mother of All Philippine Festivals," it features participants dressed in indigenous Ati tribal attire, with faces painted black to symbolize the early settlers' welcoming of the Malay immigrants. The festival includes street dancing, parades, and vibrant music, celebrating Filipino culture and devotion. It's a lively and colorful event that attracts both locals and tourists, blending religious and cultural traditions.</p>
+              </div>
+              <div class="culture-card" onclick="showPopup(this)">
+                  <img src="../img/section-contents/pahiyas.jpg" alt="Pahiyas Festival">
+                  <h4>Pahiyas Festival</h4>
+                  <div>Lucban, Quezon</div>
+                  <p>The Pahiyas Festival is an annual celebration in Lucban, Quezon, held every May in honor of San Isidro Labrador, the patron saint of farmers. The festival is famous for its vibrant and creative displays of agricultural products. Locals decorate their homes with colorful rice wafers, fruits, vegetables, and other harvests, showcasing their gratitude for a bountiful harvest. The festival features a parade, street dancing, and various cultural activities, making it a unique and visually stunning celebration of Filipino farming traditions.</p>
+              </div>
+              <div class="culture-card" onclick="showPopup(this)">
+                  <img src="../img/section-contents/kadayawan.jpg" alt="Kadayawan Festival">
+                  <h4>Kadayawan Festival</h4>
+                  <div>Davao City</div>
+                  <p>The Kadayawan Festival is an annual week-long celebration in Davao City, held every August, to honor the city's cultural heritage, bountiful harvest, and the indigenous tribes of Mindanao. The festival features vibrant street dancing, colorful floats, and exhibits showcasing local products, art, and traditions. One of its highlights is the "Indak-Indak sa Kadalanan" street dancing competition, where participants wear traditional costumes. The festival also emphasizes gratitude for the natural resources and the diverse cultures of the region, making it a lively and meaningful event for both locals and visitors.</p>
+              </div>
+              <div class="culture-card" onclick="showPopup(this)">
+                  <img src="../img/section-contents/sinulog.jpg" alt="Sinulog Festival">
+                  <h4>Sinulog Festival</h4>
+                  <div>Cebu City</div>
+                  <p>The Sinulog Festival is an annual cultural and religious celebration held in Cebu City every January, in honor of the Santo Niño (Child Jesus). The festival is known for its grand street parades, where participants dance to the rhythm of drums in a vibrant display of traditional Filipino music and dance. The "Sinulog" dance, characterized by two steps forward and one step back, symbolizes the Filipino people's conversion to Christianity. The event also features floats, cultural performances, and religious processions, making it one of the largest and most popular festivals in the Philippines.</p>
+              </div>
+              <div class="culture-card" onclick="showPopup(this)">
+                  <img src="../img/section-contents/giantlantern.jpg" alt="Giant Lantern Festival">
+                  <h4>Giant Lantern Festival</h4>
+                  <div>San Fernando, Pampanga</div>
+                  <p>The Giant Lantern Festival is an annual event held in San Fernando, Pampanga, typically in December, to celebrate Christmas. Known for its stunning display of enormous, colorful lanterns, the festival features intricate and elaborate lanterns made by local artisans. These lanterns are often several feet in diameter and are beautifully lit, creating a mesmerizing light show. The highlight of the festival is a competition where different barangays (villages) showcase their best lantern designs. The event has become a symbol of Filipino creativity, craftsmanship, and festive spirit.</p>
+              </div>
+              <div class="culture-card" onclick="showPopup(this)">
+                  <img src="../img/section-contents/dinagyang.jpg" alt="Dinagyang Festival">
+                  <h4>Dinagyang Festival</h4>
+                  <div>Iloilo City</div>
+                  <p>The Dinagyang Festival is a vibrant cultural and religious celebration held annually in Iloilo City every January, in honor of the Santo Niño (Child Jesus) and to commemorate the arrival of Malay settlers in Panay. The festival is known for its lively street dancing, where participants wear elaborate costumes and headdresses inspired by the indigenous Ati tribe. The highlight of the event is the "tribal dance competition," where groups perform traditional dances in colorful, energetic displays. The festival also features religious processions, food fairs, and cultural performances, making it one of the most exciting and widely celebrated festivals in the Philippines.</p>   
+              </div>
+  </section>
+</div>
+
+<div id="popup" class="popup">
+  <div class="popup-content">
+      <span class="close-btn" onclick="hidePopup()">&times;</span>
+      <img id="popup-img" src="" alt="">
+      <h3 id="popup-title"></h3>
+      <p id="popup-description"></p>
+  </div>
+</div>
+  </section>
+
+    <!--Tips Section-->
+  <section id="travelTips" class="travelTips">
+    <header style="height: 3.375rem;"></header>
+
+    <div class="tips-container">
+    <h1 class="tips-title">Essential <span class="highlight">Tips</span> for your Adventures<span class="highlight">!</span></h1>
+    <div class="tips-wrapper">
+      <i id="left"  class="fa-solid fa-angle-left"></i>
+      <ul class="carousel">
+        <li class="tips-card" onclick="window.open('../HTML/travel_tips_details.html?card=1', '_blank')">
+          <div class="img"><img src="../img/section-contents/travel1.jpg" alt="photo" draggable="false"></div>
+          <h2>TRAVEL TIPS 01</h2>
+          <span>WHAT ARE THE MOST IMPORTANT THINGS TO BRING?</span>
+        </li>
+        <li class="tips-card" onclick="window.open('../HTML/travel_tips_details.html?card=2', '_blank')">
+          <div class="img"><img src="../img/section-contents/travel2.jpg" alt="photo" draggable="false"></div>
+          <h2>TRAVEL TIPS 02</h2>
+          <span>HOW TO PACK LIGHT</span>
+        </li>
+        <li class="tips-card" onclick="window.open('../HTML/travel_tips_details.html?card=3', '_blank')">
+          <div class="img"><img src="../img/section-contents/travel3.jpg" alt="photo" draggable="false"></div>
+          <h2>TRAVEL TIPS 03</h2>
+          <span>HOW TO NAVIGATE AIRPORTS EASILY</span>
+        </li>
+        <li class="tips-card" onclick="window.open('../HTML/travel_tips_details.html?card=4', '_blank')">
+          <div class="img"><img src="../img/section-contents/travel4.jpg" alt="photo" draggable="false"></div>
+          <h2>TRAVEL TIPS 04</h2>
+          <span>BEST APPS FOR TRAVELERS</span>
+        </li>
+        <li class="tips-card" onclick="window.open('../HTML/travel_tips_details.html?card=5', '_blank')">
+          <div class="img"><img src="../img/section-contents/travel5.jpg" alt="photo" draggable="false"></div>
+          <h2>TRAVEL TIPS 05</h2>
+          <span>STAY HYDRATED DURING TRAVEL</span>
+        </li>
+      </ul>
+      <i id="right" class="fa-solid fa-angle-right"></i>
+    </div>
+  </div>
+  </section>
+
+    <!--Community Section-->
+  <section id="community">
+      <header style="height: 55px;"></header>
+      <h1 class="community-title">COMMUNITY</h1>
+  
+      <div class="community-container">
+
+          <i id="prev-btn" class="fa-solid fa-angle-left"></i>
+          <i id="next-btn" class="fa-solid fa-angle-right"></i>
+  
+          <div class="community-content-container">
+              <div class="text-content" id="content">
+                  <h2 class="author">Mark Zuckerberg</h2>
+                  <p class="quote">
+                      "My visit to Mt. Pinatubo was nothing short of extraordinary. The hike to the crater was challenging, but reaching the summit was absolutely worth it. Standing at the edge of the crater, the view of the emerald green lake nestled between rugged volcanic peaks was breathtaking. The surrounding landscapes, shaped by the 1991 eruption, were both humbling and awe-inspiring. It was a powerful reminder of nature's beauty and strength, and it gave me a sense of calm and appreciation for the raw, untouched beauty of the Philippines."
+                  </p>
+              </div>
+          </div>
+
+          <a href="https://www.facebook.com/share/g/qSafrVCgPZqJj4iY/" class="visit-group-button" target="_blank">VISIT GROUP</a>
+      </div>
+  </section>
+  
+  
+    <!--Reach Us-->
+  <footer id="reachUs">
+    <div class="footer-wrapper">
+      <div class="footer-tagLine"><a href="#hero"><h1>FINDING PHILIPPINES.</h1><h2>One Destination at a Time</h2></a></div>
+    <div class="footer-links">
+      <a href="https://www.facebook.com/share/g/qSafrVCgPZqJj4iY/" target="_blank"><i class="fa-brands fa-facebook"></i><p>www.Artvelfun.com</p></a>
+      <a href="https://www.instagram.com/artvelfun/"  target="_blank"><i class="fa-brands fa-instagram"></i><p>@artvelfun</p></a>
+      <a href="tel: +639092970782"  target="_blank"><i class="fa-solid fa-phone"></i><p>+639092970782</p></a>
+      <a href="mailto:artfelfun@gmail.com" ><i class="fa-solid fa-envelope"></i><p>artfelfun@gmail.com</p></a>
+    </div>
+    </div>
+  </footer>
+
+
+
+  <!--for Header-->
+  <script src="navbar/navbar.js"></script>
+  <!--for Hero-section-->
+  <script src="Javascript/index.js"></script>
+  </body>
+</html>

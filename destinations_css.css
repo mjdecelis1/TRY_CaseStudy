@@ -1,0 +1,333 @@
+/*Declaration of Fonts*/
+@font-face {
+  font-family: 'Camar';
+  src: url('../fonts/Camar 400.otf');
+}
+
+@font-face {
+    font-family: Roboto-Bold;
+    src: url(../fonts/roboto_bold.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Light;
+    src: url(../fonts/roboto_light.ttf);
+}
+
+@font-face {
+    font-family: Roboto-Regular;
+    src: url(../fonts/roboto_regular.ttf);
+}
+
+/* changes in navigation bar */
+.navbar{
+  background-color: #ef8c24;
+}
+  .dropdown_menu{
+    background: rgb(152, 152, 152);
+    transition: background 0.7s ease;
+    backdrop-filter: unset;
+    box-shadow: 0px 2px 2px rgba(146, 146, 146, 0.4);
+  }
+  .navbar .nav-item .dropdown{
+    background: rgb(152, 152, 152);
+    transition: background 0.7s ease;
+    backdrop-filter: unset;
+    box-shadow: 0px 2px 2px rgba(146, 146, 146, 0.4);
+  }
+  .navbar{
+    background-color: #ef8c24;
+    .links a:hover{
+      background-color: white;
+      color: #ef8c24;
+    }
+    .links a{
+      text-shadow: none;
+    }
+  }
+
+/*Main Page*/
+body{
+    background-color: #EAE4D6;
+    margin-bottom: 20px;
+}
+
+/*Title & Buttons*/
+.destinationsTitle{
+    text-align: center;
+    margin-bottom: 1.25rem;
+    padding-top: 1.25rem;
+    color: #ef8c24;
+    font-size: 2.5rem;
+}
+  .destinationsTitle .luzonTitle, .visayasTitle, .mindanaoTitle{
+    font-family: 'Camar';
+  }
+
+.options{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.regionSelect:hover{
+  transition: ease .2s;
+    background-color: #EF8C24;
+    color: white;
+}
+
+.regionSelect{
+    padding: 10px 20px;
+    border: none;
+    background-color: white;
+    color: #EF8C24;
+    cursor: pointer;
+    border-radius: 12px;
+    font-family: Roboto-Bold;
+    font-size: 1rem;
+    text-align: left;
+}
+
+.island, .beach, .mountain, .historical, .waterfall{
+    display: flex;
+    padding: 10px 20px;
+    border: none;
+    background-color: #EF8C24;
+    border: 2px solid #EF8C24;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+    font-family: Roboto-Bold;
+    font-size: 1rem;
+    text-align: center;
+}
+
+.island:hover, .beach:hover, .mountain:hover, .historical:hover, .waterfall:hover{
+    transition: ease .2s;
+    border: 2px solid #EF8C24;
+    color: #EF8C24;
+    background-color: white;
+}
+
+.clicked{
+    color: #EF8C24;
+    border: 2px solid #EF8C24;
+    background-color: white;
+}
+
+/*Grid*/
+.contents {
+    justify-content: center;
+    display: flex;
+    gap: 50px 25px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+}
+
+.contents > * {
+  width: 14.375rem;
+  height: 19.5rem;
+  background: #FFFCFC;
+  border: 1px solid #ddd;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: left;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  
+  opacity: 0;
+  transform: translateY(20px);
+
+  animation: fadeInUp 0.5s ease-out forwards;
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.contents>*:hover {
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  transform: translateY(-5px);
+}
+
+.contents div{
+  height: auto;
+}
+
+.contents>* img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+.contents>* p:first-of-type{
+    font-family: Roboto-Bold;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-size: 1rem;
+}
+
+.contents>* p:nth-of-type(2){
+    font-family: Roboto-Regular;
+    font-size: 0.95rem;
+}
+
+.contents>* p:nth-of-type(3){
+    font-family: Roboto-Light;
+    white-space: normal;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 0.9rem;
+
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    line-clamp: 5;
+}
+
+/*Float*/
+.floatingDIV>* {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    background-color: #FFFFFF;
+    display: none;
+    z-index: 1000;
+    box-shadow: 0 0 5px 3px rgba(0, 0, 0, 0.2);
+    justify-content: center;
+    width: 34.375rem;
+    border-radius: 10px;
+}
+
+.floatingDIV>* img{
+    border-radius: 20px;
+    width: 25rem;
+    height: auto;
+    margin: 20px 70px;
+}
+
+.floatingDIV>* p:first-of-type{
+    font-family: Camar;
+    font-size: 2rem;
+    color: #EF8C24;
+    margin: 0px;
+}
+.closeButton{
+    text-align: left;
+    font-family: Roboto-Bold;
+    margin-right: 1rem;
+    background-color: #FFFFFF;
+    border: none;
+    color: black;
+    font-size: 2rem;
+    cursor: pointer;
+}
+.floatingDIV>* p:nth-of-type(2){
+    font-family: Roboto-Light;
+    margin: 0px 10px;
+    font-size: 1rem;
+}
+
+.imageq {
+    display: flex;
+    overflow-x: auto;
+    white-space: nowrap;
+    justify-content: flex-start;
+    -ms-overflow-style: none;  /* For Internet Explorer */
+    scrollbar-width: none;  /* For Firefox */
+    cursor: grab;  /* Change cursor to indicate draggable content */
+}
+
+.imageq::-webkit-scrollbar {
+    display: none;  /* Hide scrollbar in WebKit browsers like Chrome, Safari, and Edge */
+}
+
+.imageq img {
+    margin: 0 10px;  /* Optional: space between images */
+    width: 200px;  /* Example size for images */
+    height: auto;
+
+    border-radius: 20px;
+    width: 25rem;
+    height: auto;
+    margin: 20px 70px;
+}
+
+
+/*For Disabling Outside Floating DIV*/
+.overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.2);
+    display: none;
+}
+
+/*For Cellphones*/
+@media screen and (max-width: 480px) {
+    body{
+        margin: 0px;
+    }
+    .options{
+        overflow-x: auto; /* Enable horizontal scrolling */
+        white-space: nowrap;
+        justify-content: flex-start;
+    }
+
+    .options::-webkit-scrollbar {
+        display: none;
+    }
+
+    .contents>*{
+        width: 225px;
+        text-align: center;
+    }
+
+    .contents>* img{
+        width: 85%;
+    }
+
+    .contents>* p{
+        font-size: 50%;
+        margin-bottom: 0px;
+    }
+
+    .contents>* p:nth-of-type(3){
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 7;
+        line-clamp: 7;
+    }
+
+    .floatingDIV>* {
+        width: 20.375rem;
+    }
+
+    .floatingDIV>* img{
+        display: flex;
+        width: 75%;
+        display: block;
+        margin: 20px auto;
+    }
+
+    .floatingDIV>* p:first-of-type{
+        font-size: 1.5rem;
+    }
+
+    .floatingDIV>* p:nth-of-type(2){
+        font-size: 0.8rem;
+    }
+}

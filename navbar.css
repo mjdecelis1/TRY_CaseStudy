@@ -1,0 +1,244 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto, system-ui, -apple-system, 'Segoe UI', Oxygen, Ubuntu, Cantarell, 'Open Sans', sans-serif;
+}
+.body{
+  background-color: #000;
+}
+
+.links li{
+  list-style: none;
+}
+
+.links a{
+  text-decoration: none;
+  font-weight: bold;
+  text-shadow:0 5px 5px rgba(98, 98, 98, 0.5);
+  color:white;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
+  border-radius: .4rem;
+  transition: background-color 0.3s ease-out, padding 0.3s ease-out;
+}
+  .links a:hover{
+    background-color: #ef8c24;
+    text-shadow: none;
+    padding: 0.5rem 1.5rem;
+  }
+  
+.logo img { 
+  width: 8.5rem;
+  transform: scale(1);
+  transition: transform 0.2s ease-out;
+}
+  
+  .logo img:hover {
+    transform: scale(1.05);
+  }
+
+  .logo img:active{
+    transform: scale(.95);
+  }
+  
+
+/* HEADER */
+header{
+  position: relative;
+  padding: 0 2rem;
+  z-index: 2;
+}
+
+.navbar{
+  width: 100%;
+  height: 3.375rem;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-transform: uppercase;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  padding: 0 15%;
+  transition: background-color .5s ease-in;
+}
+
+.navbar.scrolled {
+  background-color: #ef8c24;
+  .links a:hover{
+    background-color: white;
+    color: #ef8c24;
+  }
+  .links a{
+    text-shadow: none;
+  }
+}
+
+.navbar .links{
+  display: flex;
+  gap: .5rem;
+}
+
+.navbar .toggle_btn{
+  color: white;
+  font-size: 1.3rem;
+  cursor: pointer;
+  display: none;
+}
+
+.nav-item{
+  position: relative;
+}
+.navbar .nav-item .dropdown{
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0; 
+  margin-top: .5rem;
+  width: 10rem;
+  max-height: fit-content;  
+  background: rgba(255, 255, 255, .1);
+  backdrop-filter: blur(15px);
+  border-radius: 0.625rem;
+  overflow: hidden;
+  z-index: 10;
+  transition: 1s ease;
+}
+
+.navbar .nav-item:hover .dropdown{
+  display: block;
+}
+
+.dropdown a{
+  text-shadow: none;
+}
+
+.dropdown a:hover{
+  background-color: #ef8c24;
+  color: white;
+  padding: .6rem 100%;
+}
+
+.dropdown li{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.navbar .nav-item .dropdown.scrolled{
+  background: rgb(152, 152, 152);
+  transition: background 0.7s ease;
+  backdrop-filter: unset;
+  box-shadow: 0px 2px 2px rgba(146, 146, 146, 0.4);
+}
+
+/* DROPDOWN in mobile view*/
+.destination-toggle i, .destination i{
+  position: absolute;
+  margin-top: 0.1rem;
+  margin-left: 0.3rem;
+}
+.dropdown_menu a{
+  font-weight: bold;
+  text-decoration: none;
+  color:white;
+  padding: 0.7rem;
+  font-size: 1rem;
+  border-radius: 0.4rem;
+  transition: background-color 0.3s ease-out, padding 0.3s ease-out;
+}
+  .dropdown_menu a:hover{
+    background-color: #ef8c24;
+    padding: 1rem 100%;
+  }
+
+.dropdown_menu{
+  display: none;
+  position: absolute;
+  right: 2rem;
+  top: 3.5rem;
+  max-height: 0;
+  width: 18.75rem;  
+  background: rgba(255, 255, 255, .1);
+  backdrop-filter: blur(15px);
+  border-radius: 0.625rem;
+  overflow: hidden;
+  transition: max-height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+  .dropdown_menu.scrolled{
+    background: rgb(152, 152, 152);
+    transition: background 0.7s ease;
+    backdrop-filter: unset;
+    box-shadow: 0px 2px 2px rgba(146, 146, 146, 0.4);
+  }
+
+.dropdown_menu.open{
+  max-height: 18.5rem;
+}
+
+.dropdown_menu li{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-item-mobile {
+  position: relative;
+}
+
+.dropdown_mobile {
+  display: block;
+  max-height: 0;
+  transition: max-height 0.3s ease-in;
+  overflow: hidden;
+}
+
+.dropdown_mobile.open, .dropdown_menu.open {
+  max-height: 30rem;
+}
+
+.dropdown_mobile a{
+  font-size: .8rem;
+  color: rgb(231, 231, 231);
+}
+
+.dropdown_mobile:hover{
+  overflow: visible;
+}
+
+.dropdown_mobile a:hover {
+  background-color: #ef8c24;
+  padding: .9rem 300%;
+}
+
+/* RESPONSIVE DESIGN */
+@media(max-width: 1200px) {
+  .navbar .links {
+    display: none;
+  }
+
+  .navbar .toggle_btn{
+    display: block;
+  }
+
+  .dropdown_menu{
+    display: block;
+  }
+
+  .navbar{
+    padding: 0 2rem;
+  }
+}
+
+@media(max-width: 36rem){
+  .dropdown_menu{
+    left: 2rem;
+    width: unset;
+  }
+}

@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="navbar/navbar.css">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" 
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" 
+      crossorigin="anonymous" 
+      referrerpolicy="no-referrer" 
+    />
+
+    <link rel="stylesheet" href="../destinations_files/destinations_css.css">
+    <title id="title">Destinations</title>
+</head>
+<body>
+  <!-- Navigation Bar -->
+  <header style="height: 3.375rem;">
+    <div class="navbar" id="navbar-placeholder"></div>
+  </header>
+
+    <!--Title & Buttons-->
+    <div class="destinationsTitle" id="destinationsTitle">
+        <div class="luzonTitle" id="luzonTitle">Destinations in Luzon</div>
+        <div class="visayasTitle" id="visayasTitle">Destinations in Visayas</div>
+        <div class="mindanaoTitle" id="mindanaoTitle">Destinations in Mindanao</div>
+    </div>
+    <div class="options" id="options">
+        <select class="regionSelect" id="regionSelect">
+            <option value="luzon">Luzon</option>
+            <option value="visayas">Visayas</option>
+            <option value="mindanao">Mindanao</option>
+        </select>
+        <button class="island" id="island" onclick="toggleColor('island')">Island</button>
+        <button class="beach" id="beach" onclick="toggleColor('beach')">Beach</button>
+        <button class="mountain" id="mountain" onclick="toggleColor('mountain')">Mountain</button>
+        <button class="historical" id="historical" onclick="toggleColor('historical')">Historical</button>
+        <button class="waterfall" id="waterfall" onclick="toggleColor('waterfall')">Waterfall</button>
+    </div>
+
+    <!--Contents-->
+    <div class="contents" id="contents">
+        <!--Luzon Category-->
+        <div class="BanaueRiceTerraces" id="BanaueRiceTerraces" data-region="luzon" data-category="historical mountain" onclick="showDiv('BanaueRiceTerraces2')">
+            <img src="destinations_files/luzon/banaue_rice_terraces.jfif" alt="BanaueRiceTerraces">
+                <p>Banaue Rice Terraces</p>
+                <p><i class="fas fa-map-marker-alt"></i> Banaue, Ifugao</p>
+                <p>Banaue Rice Terraces are not fair a locate to view but too a living social scene that proceeds 
+                    to support the Ifugao communities and motivate visitors around the world.</p>
+        </div>
+        <div class="CallaoCave" id="CallaoCave" data-region="luzon" data-category="mountain" onclick="showDiv('CallaoCave2')">
+            <img src="destinations_files/luzon/callao_cave.jfif" alt="CallaoCave">
+            <p>Callao Cave</p>
+            <p><i class="fas fa-map-marker-alt"></i> Pañablanca, Cagayan</p>
+            <p>Callao Cave is located in Cagayan, the Northern Luzon. It is a seven-chambered cave that has 
+                limestone formations, and features a alike chapel that illuminated by natural skylight. </p>
+        </div>
+        <div class="CalleCrisologo" id="CalleCrisologo" data-region="luzon" data-category="historical" onclick="showDiv('CalleCrisologo2')">
+            <img src="destinations_files/luzon/calle_crisologo.jfif" alt="CalleCrisologo">
+            <p>Calle Crisologo</p>
+            <p><i class="fas fa-map-marker-alt"></i> Vigan, Ilocos Norte</p>
+            <p>Calle Crisologo isn't as it were a historical location but also a dynamic center for nearby culture 
+                and commerce, making it a must-visit goal for history buffs, architecture enthusiasts, and anyone 
+                looking to involvement the timeless beauty of Vigan City.</p>
+        </div>
+        <div class="CorregidorIsland" id="CorregidorIsland" data-region="luzon" data-category="historical" onclick="showDiv('CorregidorIsland2')">
+            <img src="destinations_files/luzon/corregidor_island.jfif" alt="CorregidorIsland">
+            <p>Corregidor Island</p>
+            <p><i class="fas fa-map-marker-alt"></i> Cavite City, Cavite</p>
+            <p>A destination in Bataan which offered a historic fortress and a crucial role in World War II. 
+                It features some historic relics and hiking trails to see the natural beauty of the place.</p>
+        </div>
+        <div class="Intramuros" id="Intramuros" data-region="luzon" data-category="historical" onclick="showDiv('Intramuros2')">
+            <img src="destinations_files/luzon/intramuros.jfif" alt="Intramuros">
+            <p>Intramuros</p>
+            <p><i class="fas fa-map-marker-alt"></i> Manila</p>
+            <p>Intramuros offers a see into the country's wealthy history and social legacy, with its cobblestone 
+                lanes, preserved architecture, and authentic points of interest. Intramuros is a must-visit 
+                objective for history lovers and anybody looking to immerse themselves inside the Philippines' 
+                colonial bequest and social estate.</p>
+        </div>
+        <div class="MountPinatubo" id="MountPinatubo" data-region="luzon" data-category="historical mountain" onclick="showDiv('MountPinatubo2')">
+            <img src="destinations_files/luzon/mount_pinatubo.jfif" alt="Mount Pinatubo">
+            <p>Mount Pinatubo</p>
+            <p><i class="fas fa-map-marker-alt"></i> Zambales</p>
+            <p>Mount Pinatubo may be a idealize goal for those looking for adventure, natural beauty, and a see 
+                of how nature changes and recoups after a major volcanic occasion.</p>
+        </div>
+        <div class="MountPulag" id="MountPulag" data-region="luzon" data-category="mountain" onclick="showDiv('MountPulag2')">
+            <img src="destinations_files/luzon/mount_pulag.jfif" alt="Mount Pulag">
+            <p>Mount Pulag</p>
+            <p><i class="fas fa-map-marker-alt"></i> Benguet</p>
+            <p>Mt. Pulag is the highest peak in Luzon which is located in Benguet province. By its height, 
+                it follows also a mountain in Luzon called "Sierra Madre", which is located from the Provinces 
+                of Cagayan to Quezon. It offers a stunning "sea of clouds" experience at sunrise. </p>
+        </div>
+        <div class="PagsanjanFalls" id="PagsanjanFalls" data-region="luzon" data-category="waterfall" onclick="showDiv('PagsanjanFalls2')">
+            <img src="destinations_files/luzon/pagsanjan_falls.jfif" alt="Pagsanjan Falls">
+            <p>Pagsanjan Falls</p>
+            <p><i class="fas fa-map-marker-alt"></i> Cavinti, Laguna</p>
+            <p>Pagsanjan Falls is located in Laguna. It is also one of the most famous waterfalls in the 
+                Philippines. It is a three-tiered cascade that can be reached through an exhilarating boat 
+                ride known as the "Shooting the Rapids adventure".</p>
+        </div>
+        <div class="Sagada" id="Sagada" data-region="luzon" data-category="mountain" onclick="showDiv('Sagada2')">
+            <img src="destinations_files/luzon/sagada.jpg" alt="Sagada">
+            <p>Sagada</p>
+            <p><i class="fas fa-map-marker-alt"></i> Mountain Province</p>
+            <p>Sagad is located in Mountain Province and its known for its cool climate and mystical atmosphere. 
+                This place is famous for its Hanging Coffins, and an ancient burial tradition of the Igorot people. 
+                It is a haven for adventure seekers and nature lovers.</p>
+        </div>
+        <div class="TaalVolcano" id="TaalVolcano" data-region="luzon" data-category="island" onclick="showDiv('TaalVolcano2')">
+            <img src="destinations_files/luzon/taal_volcano.jfif" alt="Taal Volcano">
+            <p>Taal Volcano</p>
+            <p><i class="fas fa-map-marker-alt"></i>  Batangas</p>
+            <p>Taal Volcano's open magnificence, combined with its geographical centrality, makes it a must-visit 
+                for travelers looking to explore the Philippines' characteristic ponders.</p>
+        </div>
+
+        <!--Visayas Category-->
+        <div class="BiriIsland" id="BiriIsland" data-region="visayas" data-category="island" onclick="showDiv('BiriIsland2')">
+            <img src="destinations_files/visayas/biri_island.jfif" alt="BiriIsland">
+            <p>Biri Island</p>
+            <p><i class="fas fa-map-marker-alt"></i> Biri, Northern Samar</p>
+            <p>Biri Island, found off the northern coast of Samar, could be a natural paradise known for its shocking rock formations, 
+                crystal-clear waters, and rich biodiversity. A generally untainted destination, it offers an off-the-beaten-path experience 
+                for gutsy travelers looking to explore its one of a kind scenes and vibrant marine life. Biri Island could be a flawless, 
+                quiet escape for nature lovers, photographers, and anybody seeking an adventure in one of the Philippines' lesser-known pearls.</p>
+        </div>
+        <div class="Boracay" id="Boracay" data-region="visayas" data-category="beach" onclick="showDiv('Boracay2')">
+            <img src="destinations_files/visayas/boracay.jfif" alt="Boracay">
+            <p>Boracay</p>
+            <p><i class="fas fa-map-marker-alt"></i> Malay, Aklan</p>
+            <p>Boracay is one of the Philippines' most famous tourist destinations, known for its powdery white sands, turquoise waters, and 
+                vibrant nightlife. This small island offers a perfect mix of relaxation, adventure, and entertainment, making it a top choice for travelers
+                 worldwide. The heart of Boracay is White Beach, a stunning stretch of sand divided into Stations 1, 2, and 3, each offering one of a kind 
+                 vibes for relaxation, feasting, and nightlife.</p>
+        </div>
+        <div class="CamiguinIsland" id="CamiguinIsland" data-region="visayas" data-category="island" onclick="showDiv('CamiguinIsland2')">
+            <img src="destinations_files/visayas/camiguin_island.jfif" alt="CamiguinIsland">
+            <p>Camiguin Island</p>
+            <p><i class="fas fa-map-marker-alt"></i> Bohol Sea</p>
+            <p>This Island is known as the "Island Born of Fire". located in Camiguin Province. It is also home numerous volcanoes, hot springs, and 
+                waterfalls. It also features the Katibawasan Falls and Camiguins's white beach that provides the beautiful views in the surrounding 
+                sea and volcanoes.</p>
+        </div>
+        <div class="ChocolateHills" id="ChocolateHills" data-region="visayas" data-category="mountain" onclick="showDiv('ChocolateHills2')">
+            <img src="destinations_files/visayas/chocolate_hills.jfif" alt="ChocolateHills">
+            <p>Chocolate Hills</p>
+            <p><i class="fas fa-map-marker-alt"></i> Bohol Province</p>
+            <p>The Chocolate Hills, found in Bohol, is one of the country's most famous natural attractions. This topographical ponder comprises of 
+                over 1,200 symmetrical limestone hills scattered over the towns of Carmen, Batuan, and Sagbayan. In the midst of the dry season, the 
+                hills turn chocolate-brown, taking after giant hills of chocolate, which gives them their title. The Chocolate Hills are a affirmation to 
+                the beauty and riddle of nature, making them a must-see destination for any traveler visiting the Philippines. </p>
+        </div>
+        <div class="KalanggamanIslands" id="KalanggamanIslands" data-region="visayas" data-category="island" onclick="showDiv('KalanggamanIslands2')">
+            <img src="destinations_files/visayas/kalanggaman_islands.jfif" alt="KalanggamanIslands">
+            <p>Kalanggaman Islands</p>
+            <p><i class="fas fa-map-marker-alt"></i> Leyte</p>
+            <p>Kalanggaman Island, found off the coast of Palompon in Leyte, is popular for its breathtaking beauty, crystal-clear waters, and astonishing 
+                white-sand shorelines. Frequently portrayed as one of the preeminent wonderful islands within the Philippines, Kalanggaman may be a 
+                perfect goal for those seeking out for a peaceful elude in a tropical paradise. Kalanggaman Island's pure sandbars, clear waters, and 
+                peaceful environment make it a must-visit destination for shoreline lovers and nature enthusiasts within the Philippines.</p>
+        </div>
+        <div class="KawasanFalls" id="KawasanFalls" data-region="visayas" data-category="waterfall" onclick="showDiv('KawasanFalls2')">
+            <img src="destinations_files/visayas/kawasan_falls.jfif" alt="KawasanFalls">
+            <p>Kawasan Falls</p>
+            <p><i class="fas fa-map-marker-alt"></i> Oringao, Kabankalan City</p>
+            <p>A hidden gem in located Bago City, Negros Occidental. Mag-aso Falls is a two-tier waterfall surrounded by lush tropical greenery. It is 
+                perfect destination for swimming and picknicking because of its wonderful beauty.</p>
+        </div>
+        <div class="MagasoFalls" id="MagasoFalls" data-region="visayas" data-category="waterfall" onclick="showDiv('MagasoFalls2')">
+            <img src="destinations_files/visayas/mag_aso_falls.jpg" alt="MagasoFalls">
+            <p>Mag-aso Falls</p>
+            <p><i class="fas fa-map-marker-alt"></i> Oringao, Kabankalan City</p>
+            <p>A hidden gem in located Bago City, Negros Occidental. Mag-aso Falls is a two-tier waterfall surrounded by lush tropical greenery. It is 
+                perfect destination for swimming and picknicking because of its wonderful beauty.</p>
+        </div>
+        <div class="MagellanCross" id="MagellanCross" data-region="visayas" data-category="historical" onclick="showDiv('MagellanCross2')">
+            <img src="destinations_files/visayas/magellan_cross.jpg" alt="MagellanCross">
+            <p>Magellan Cross</p>
+            <p><i class="fas fa-map-marker-alt"></i> P. Burgos St, Cebu City</p>
+            <p>Magellan's Cross isn't fair a vital artifact but a image of certainty and flexibility, making it a must-visit for anyone exploring Cebu 
+                City's affluent history and culture. It is found inside inside the heart of Cebu City, is one of the Philippines' most famous historical 
+                focuses of interest. Planted in 1521 by Portuguese explorer Ferdinand Magellan on behalf of Spain, the cross symbolizes the introduction 
+                of Christianity to the Philippines and remains a regarded area for local individuals and guests alike.</p>
+        </div>
+        <div class="PanayIsland" id="PanayIsland" data-region="visayas" data-category="island" onclick="showDiv('PanayIsland2')">
+            <img src="destinations_files/visayas/panay_island.jfif" alt="PanayIsland">
+            <p>Panay Island</p>
+            <p><i class="fas fa-map-marker-alt"></i> Visayan Islands</p>
+            <p>Panay Island is home to the famous Pandan Beach and which is located in Iloilo. The Island offers a variety of attractions, from the 
+                beautiful Gigantes Islands with its crystal-clear waters and towering rock formations. It is also gifted by the UNESCO World Heritage Site.</p>
+        </div>
+        <div class="PanglaoIsland" id="PanglaoIsland" data-region="visayas" data-category="island" onclick="showDiv('PanglaoIsland2')">
+            <img src="destinations_files/visayas/pang_lao_island.jfif" alt="PanglaoIsland">
+            <p>Panglao Island</p>
+            <p><i class="fas fa-map-marker-alt"></i> Bohol Province</p>
+            <p>Panglao Island is located just off the coast of Bohol. This island is known for its pristine beaches like Alona Beach, that is perfect for 
+                swimming and diving. It’s also a great base for exploring nearby attractions like the Hinagdanan Cave, and Balicasag Island Marine Sanctuary.</p>
+        </div>
+
+        <!--Mindanao Category-->
+        <div class="DahilayanForestPark" id="DahilayanForestPark" data-region="mindanao" data-category="historical" onclick="showDiv('DahilayanForestPark2')">
+            <img src="destinations_files/mindanao/dahilayan_forest_park.jpg" alt="DahilayanForestPark">
+            <p>Dahilayan Forest Park</p>
+            <p><i class="fas fa-map-marker-alt"></i> Dahilayan, Manalo Fortich Bukidnon</p>
+            <p>Dahilayan Forest Park is located in Manolo Fortich, Bukidnon. It offers a escapelocated in the heart of Mindanao. It is also known for 
+                its Dahilayan Zipline, which is the one of the longest and highest ziplines in the Philippines.</p>
+        </div>
+        <div class="DinagatIslands" id="DinagatIslands" data-region="mindanao" data-category="island" onclick="showDiv('DinagatIslands2')">
+            <img src="destinations_files/mindanao/dinagat_islands.jfif" alt="DinagatIslands">
+            <p>Dinagat Islands</p>
+            <p><i class="fas fa-map-marker-alt"></i> Caraga</p>
+            <p>Dinagat Islands, found within the Caraga region of Mindanao, may be a secluded and pristine destination known for its breathtaking natural 
+                magnificence, untainted shorelines, crystal-clear waters, and lavish landscapes. Regularly overlooked by mass tourism, Dinagat Islands 
+                \offers a serene elude for those looking for experience, unwinding, and a taste of island life. Dinagat Islands is an perfect goal for 
+                travelers looking for flawless characteristic excellence, remote beaches, and a chance to investigate an untouched portion of the 
+                Philippines, away from the crowds.</p>
+        </div>
+        <div class="HinatuanEnchantedRiver" id="HinatuanEnchantedRiver" data-region="mindanao" data-category="waterfall" onclick="showDiv('HinatuanEnchantedRiver2')">
+            <img src="destinations_files/mindanao/hinatuan_enchanted_river.jpg" alt="HinatuanEnchantedRiver">
+            <p>Hinatuan Enchanted River</p>
+            <p><i class="fas fa-map-marker-alt"></i> Hinatuan, Surigao del Sur</p>
+            <p>The Enchanted River, found within the municipality of Hinatuan, Surigao del Sur, is one of the foremost captivating natural ponders within 
+                the Philippines. Known for its mesmerizing, crystal-clear blue waters that appear to shine within the daylight, this stream has earned its 
+                mystical reputation due to its profound, unexplored waters and charming beauty. The Enchanted River could be a put of serenity, excellence, 
+                and mystery, making it a must-visit goal for those looking for to encounter one of the Philippines' most shocking and interesting natural 
+                points of interest.</p>
+        </div>
+        <div class="LakeLanao" id="LakeLanao" data-region="mindanao" data-category="island" onclick="showDiv('LakeLanao2')">
+            <img src="destinations_files/mindanao/lake_lanao.jfif" alt="LakeLanao">
+            <p>Lake Lanao</p>
+            <p><i class="fas fa-map-marker-alt"></i> Lanao del Sur</p>
+            <p>A lesser-known destination located in Lanao Del Sur. Lake Magadi is a volcanic lake that is surrounded in the mountains of Lanao del Sur. 
+                It’s famous for its turquoise blue waters and its also surrounded by lush landscapes.</p>
+        </div>
+        <div class="LakeSebu" id="LakeSebu" data-region="mindanao" data-category="historical" onclick="showDiv('LakeSebu2')">
+            <img src="destinations_files/mindanao/lake_sebu.jpg" alt="LakeSebu">
+            <p>Lake Sebu</p>
+            <p><i class="fas fa-map-marker-alt"></i> South Cotabato</p>
+            <p>Lake Sebu is located in South Cotabato, and its a serene destination known for its landscapes and cultural heritage. It’s also the home of 
+                the indigenous T'boli people, and visitors can experience the tribes traditional T'boli weaving.</p>
+        </div>
+        <div class="MacaraegMacapagalAncestralHouse" id="MacaraegMacapagalAncestralHouse" data-region="mindanao" data-category="historical" onclick="showDiv('MacaraegMacapagalAncestralHouse2')">
+            <img src="destinations_files/mindanao/macaraeg_macapagal_ancestral_house.jpg" alt="MacaraegMacapagalAncestralHouse">
+            <p>Macaraeg Macapagal Ancestral House</p>
+            <p><i class="fas fa-map-marker-alt"></i> Iligan City, Lanao del Norte</p>
+            <p>Macaraeg- Macapagal Ancestral House is located in Iligan City and it offers history and Architecture that offers a glimpse to the past. 
+                This heritage house is a beautiful example of Spanish-era architecture and holds a collection of antiques and artworks.</p>
+        </div>
+        <div class="MountApo" id="MountApo" data-region="mindanao" data-category="mountain" onclick="showDiv('MountApo2')">
+            <img src="destinations_files/mindanao/mount_apo.jfif" alt="MountApo">
+            <p>Mount Apo</p>
+            <p><i class="fas fa-map-marker-alt"></i> Davao City, Davao del Sur</p>
+            <p>Mount Apo, standing at 2,954 meters (9,692 feet) over ocean level, is the most elevated mountain within the Philippines and a loved 
+                destination for trekkers and nature enthusiasts. Found between Davao City, Davao del Sur, and North Cotabato, it is known for its 
+                challenging climbs, rich biodiversity, and dazzling views. Climbing Mount Apo may be a fulfilling challenge for experienced trekkers, 
+                whereas its surrounding ranges offer a range of characteristic attractions for those looking to explore its magnificence from a more 
+                loose pace.</p>
+        </div>
+        <div class="PhilippineEagleCenter" id="PhilippineEagleCenter" data-region="mindanao" data-category="historical" onclick="showDiv('PhilippineEagleCenter2')">
+            <img src="destinations_files/mindanao/philippine_eagle_center.jpg" alt="PhilippineEagleCenter">
+            <p>Philippine Eagle Center</p>
+            <p><i class="fas fa-map-marker-alt"></i> Davao City, Davao del Sur</p>
+            <p>The Philippine Eagle Center, found in Malagos, Davao City, could be a imperative preservation center committed to protecting the 
+                basically endangered Philippine eagle, the country's national bird. Set in a rich forest environment, the center plays a key part 
+                within the preservation and breeding of this grand bird, whereas too serving as an instructive office for natural life devotees and 
+                visitors. In expansion to the Philippine eagle, the center works to teach the open around biodiversity preservation and the conservation 
+                of the country's interesting wildlife. For nature partners and natural life devotees, the Philippine Eagle Center could be a must-visit 
+                goal that mixes education, preservation, and characteristic magnificence.</p>
+        </div>
+        <div class="SamalIsland" id="SamalIsland" data-region="mindanao" data-category="island" onclick="showDiv('SamalIsland2')">
+            <img src="destinations_files/mindanao/samal_island.jfif" alt="SamalIsland">
+            <p>Samal Island</p>
+            <p><i class="fas fa-map-marker-alt"></i> Davao City</p>
+            <p>Samal Island, found fair off the coast of Davao City, could be a tropical heaven famous for its brilliant shorelines, crystal-clear waters, 
+                and extravagant greenery. Known as the "Island Garden City of Samal," it offers a idealize blend of natural magnificence, experience, and 
+                unwinding, making it a best goal for both neighborhood and universal travelers. Samal Island's peaceful air, exquisite shorelines, and 
+                grouped ordinary attractions make it an perfect escape for nature lovers, experience searchers, and those looking to loosen up in a 
+                peaceful tropical setting.</p>
+        </div>
+        <div class="TinuyanFalls" id="TinuyanFalls" data-region="mindanao" data-category="waterfall" onclick="showDiv('TinuyanFalls2')">
+            <img src="destinations_files/mindanao/tinuy_an_falls.jfif" alt="TinuyanFalls">
+            <p>Tinuy-an Falls</p>
+            <p><i class="fas fa-map-marker-alt"></i> Bislig, Surigao del Sur</p>
+            <p>Tinuy-an falls is located in Bislig, Surigao Del Sur and its often referred to as the "Niagara Falls of the Philippines". Tinuy-an Falls 
+                spans 95 meters wide and drops around 55 meters, creating a stunning curtain of water.</p>
+        </div>
+    </div>
+
+    <!-- Floating Transparent Div -->
+    <div class="floatingDIV" id="floatingDIV">
+        <!--Luzon Category Floating-->
+        <div class="BanaueRiceTerraces2" id="BanaueRiceTerraces2">
+            <p><button class="closeButton" onclick="closeDiv('BanaueRiceTerraces2')">x</button>Banaue Rice Terraces</p>
+                <div class="imageq">
+                <img src="destinations_files/luzon/banaue_rice_terraces.jfif" alt="Banaue Rice Terraces 1">
+                <img src="destinations_files/luzon/banaue_rice_terraces.jfif" alt="Banaue Rice Terraces 2">
+                </div>
+            <p></p>
+        </div>
+        <div class="CallaoCave2" id="CallaoCave2" onclick="closeDiv('CallaoCave2')">
+            <p><button class="closeButton" onclick="closeDiv('CallaoCave2')">x</button>Callao Cave</p>
+            <img src="destinations_files/luzon/callao_cave.jfif" alt="CallaoCave">
+            <p></p>
+        </div>
+        <div class="CalleCrisologo2" id="CalleCrisologo2" onclick="closeDiv('CalleCrisologo2')">
+            <p><button class="closeButton" onclick="closeDiv('CalleCrisologo2')">x</button>Calle Crisologo</p>
+            <img src="destinations_files/luzon/calle_crisologo.jfif" alt="CalleCrisologo">
+            <p></p>
+        </div>
+        <div class="CorregidorIsland2" id="CorregidorIsland2" onclick="closeDiv('CorregidorIsland2')">
+            <p><button class="closeButton" onclick="closeDiv('CorregidorIsland2')">x</button>Corregidor Island</p>
+            <img src="destinations_files/luzon/corregidor_island.jfif" alt="CorregidorIsland">
+            <p></p>
+        </div>
+        <div class="Intramuros2" id="Intramuros2" onclick="closeDiv('Intramuros2')">
+            <p><button class="closeButton" onclick="closeDiv('Intramuros2')">x</button>Intramuros</p>
+            <img src="destinations_files/luzon/intramuros.jfif" alt="Intramuros">
+            <p></p>
+        </div>
+        <div class="MountPinatubo2" id="MountPinatubo2" onclick="closeDiv('MountPinatubo2')">
+            <p><button class="closeButton" onclick="closeDiv('MountPinatubo2')">x</button>Mount Pinatubo</p>
+            <img src="destinations_files/luzon/mount_pinatubo.jfif" alt="MountPinatubo">
+            <p></p>
+        </div>
+        <div class="MountPulag2" id="MountPulag2" onclick="closeDiv('MountPulag2')">
+            <p><button class="closeButton" onclick="closeDiv('MountPulag2')">x</button>Mount Pulag</p>
+            <img src="destinations_files/luzon/mount_pulag.jfif" alt="MountPulag">
+            <p></p>
+        </div>
+        <div class="PagsanjanFalls2" id="PagsanjanFalls2" onclick="closeDiv('PagsanjanFalls2')">
+            <p><button class="closeButton" onclick="closeDiv('PagsanjanFalls2')">x</button>Pagsanjan Falls</p>
+            <img src="destinations_files/luzon/pagsanjan_falls.jfif" alt="PagsanjanFalls">
+            <p></p>
+        </div>
+        <div class="Sagada2" id="Sagada2" onclick="closeDiv('Sagada2')">
+            <p><button class="closeButton" onclick="closeDiv('Sagada2')">x</button>Sagada</p>
+            <img src="destinations_files/luzon/sagada.jpg" alt="Sagada">
+            <p></p>
+        </div>
+        <div class="TaalVolcano2" id="TaalVolcano2" onclick="closeDiv('TaalVolcano2')">
+            <p><button class="closeButton" onclick="closeDiv('TaalVolcano2')">x</button>Taal Volcano</p>
+            <img src="destinations_files/luzon/taal_volcano.jfif" alt="TaalVolcano">
+            <p></p>
+        </div>
+
+        <!--Visayas Category Floating-->
+        <div class="BiriIsland2" id="BiriIsland2">
+            <p><button class="closeButton" onclick="closeDiv('BiriIsland2')">x</button>Biri Island</p>
+            <img src="destinations_files/visayas/biri_island.jfif" alt="BiriIsland">
+            <p></p>
+        </div>
+        <div class="Boracay2" id="Boracay2">
+            <p><button class="closeButton" onclick="closeDiv('Boracay2')">x</button>Boracay</p>
+            <img src="destinations_files/visayas/boracay.jfif" alt="Boracay">
+            <p></p>
+        </div>
+        <div class="CamiguinIsland2" id="CamiguinIsland2">
+            <p><button class="closeButton" onclick="closeDiv('CamiguinIsland2')">x</button>Camiguin Island</p>
+            <img src="destinations_files/visayas/camiguin_island.jfif" alt="CamiguinIsland">
+            <p></p>
+        </div>
+        <div class="ChocolateHills2" id="ChocolateHills2">
+            <p><button class="closeButton" onclick="closeDiv('ChocolateHills2')">x</button>Chocolate Hills</p>
+            <img src="destinations_files/visayas/chocolate_hills.jfif" alt="ChocolateHills">
+            <p></p>
+        </div>
+        <div class="KalanggamanIslands2" id="KalanggamanIslands2">
+            <p><button class="closeButton" onclick="closeDiv('KalanggamanIslands2')">x</button>Kalanggaman Islands</p>
+            <img src="destinations_files/visayas/kalanggaman_islands.jfif" alt="KalanggamanIslands">
+            <p></p>
+        </div>
+        <div class="KawasanFalls2" id="KawasanFalls2">
+            <p><button class="closeButton" onclick="closeDiv('KawasanFalls2')">x</button>Kawasan Falls</p>
+            <img src="destinations_files/visayas/kawasan_falls.jfif" alt="KawasanFalls">
+            <p></p>
+        </div>
+        <div class="MagasoFalls2" id="MagasoFalls2">
+            <p><button class="closeButton" onclick="closeDiv('MagasoFalls2')">x</button>Mag-aso Falls</p>
+            <img src="destinations_files/visayas/mag_aso_falls.jpg" alt="MagasoFalls">
+            <p></p>
+        </div>
+        <div class="MagellanCross2" id="MagellanCross2">  
+            <p><button class="closeButton" onclick="closeDiv('MagellanCross2')">x</button>Magellan Cross</p>
+            <img src="destinations_files/visayas/magellan_cross.jpg" alt="MagellanCross">
+            <p></p>
+        </div>
+        <div class="PanayIsland2" id="PanayIsland2">
+            <p><button class="closeButton" onclick="closeDiv('PanayIsland2')">x</button>Panay Island</p>
+            <img src="destinations_files/visayas/panay_island.jfif" alt="PanayIsland">
+            <p></p>
+        </div>
+        <div class="PanglaoIsland2" id="PanglaoIsland2">
+            <p><button class="closeButton" onclick="closeDiv('PanglaoIsland2')">x</button>Panglao Island</p>
+            <img src="destinations_files/visayas/pang_lao_island.jfif" alt="PanglaoIsland">
+            <p></p>
+        </div>
+
+        <!--Mindanao-->
+        <div class="DahilayanForestPark2" id="DahilayanForestPark2">
+            <p><button class="closeButton" onclick="closeDiv('DahilayanForestPark2')">x</button>Dahilayan Forest Park</p>
+            <img src="destinations_files/mindanao/dahilayan_forest_park.jpg" alt="DahilayanForestPark">
+            <p></p>
+        </div>
+        <div class="DinagatIslands2" id="DinagatIslands2">
+            <p><button class="closeButton" onclick="closeDiv('DinagatIslands2')">x</button>Dinagat Islands</p>
+            <img src="destinations_files/mindanao/dinagat_islands.jfif" alt="DinagatIslands">
+            <p></p>
+        </div>
+        <div class="HinatuanEnchantedRiver2" id="HinatuanEnchantedRiver2">
+            <p><button class="closeButton" onclick="closeDiv('HinatuanEnchantedRiver2')">x</button>Hinatuan Enchanted River</p>
+            <img src="destinations_files/mindanao/hinatuan_enchanted_river.jpg" alt="HinatuanEnchantedRiver">
+            <p></p>
+        </div>
+        <div class="LakeLanao2" id="LakeLanao2">
+            <p><button class="closeButton" onclick="closeDiv('LakeLanao2')">x</button>Lake Lanao</p>
+            <img src="destinations_files/mindanao/lake_lanao.jfif" alt="LakeLanao">
+            <p></p>
+        </div>
+        <div class="LakeSebu2" id="LakeSebu2">
+            <p><button class="closeButton" onclick="closeDiv('LakeSebu2')">x</button>Lake Sebu</p>
+            <img src="destinations_files/mindanao/lake_sebu.jpg" alt="LakeSebu">
+            <p></p>
+        </div>
+        <div class="MacaraegMacapagalAncestralHouse2" id="MacaraegMacapagalAncestralHouse2">
+            <p><button class="closeButton" onclick="closeDiv('MacaraegMacapagalAncestralHouse2')">x</button>Macaraeg Macapagal Ancestral House</p>
+            <img src="destinations_files/mindanao/macaraeg_macapagal_ancestral_house.jpg" alt="MacaraegMacapagalAncestralHouse">
+            <p></p>
+        </div>
+        <div class="MountApo2" id="MountApo2">
+            <p><button class="closeButton" onclick="closeDiv('MountApo2')">x</button>Mount Apo</p>
+            <img src="destinations_files/mindanao/mount_apo.jfif" alt="MountApo">
+            <p></p>
+        </div>
+        <div class="PhilippineEagleCenter2" id="PhilippineEagleCenter2">
+            <p><button class="closeButton" onclick="closeDiv('PhilippineEagleCenter2')">x</button>Philippine Eagle Center</p>
+            <img src="destinations_files/mindanao/philippine_eagle_center.jpg" alt="PhilippineEagleCenter">
+            <p></p>
+        </div>
+        <div class="SamalIsland2" id="SamalIsland2">
+            <p><button class="closeButton" onclick="closeDiv('SamalIsland2')">x</button>Samal Island</p>
+            <img src="destinations_files/mindanao/samal_island.jfif" alt="SamalIsland">
+            <p></p>
+        </div>
+        <div class="TinuyanFalls2" id="TinuyanFalls2">
+            <p><button class="closeButton" onclick="closeDiv('TinuyanFalls2')">x</button>Tinuy-an Falls</p>
+            <img src="destinations_files/mindanao/tinuy_an_falls.jfif" alt="TinuyanFalls">
+            <p></p>
+        </div>
+    </div>
+
+    <!--For Disabling Outside Floating DIV-->
+    <div class="overlay" id="overlay" onclick="closeDiv()"></div>
+    <!--JavaScript-->
+    <script src="navbar/navbar.js"></script>
+    <script src="destinations_files/destinations_js.js"></script>
+</body>
+</html>
